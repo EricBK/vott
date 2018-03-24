@@ -1,0 +1,70 @@
+{
+  "name": "vott",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "egg": "^2.2.1",
+    "egg-scripts": "^2.5.0",
+    "egg-view-nunjucks": "^2.1.6",
+    "fluent-ffmpeg": "^2.1.2",
+    "rimraf": "^2.6.2",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
+    "@types/react-router": "^4.0.22",
+    "@types/react-router-dom": "^4.2.4",
+    "antd": "^3.2.2",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
+    "mobx": "^3.6.1",
+    "mobx-react": "^4.4.2",
+    "mousetrap": "^1.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "ts-loader": "^4.0.0",
+    "typescript": "^2.7.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.9",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-vott",
+    "stop": "egg-scripts stop --title=egg-server-vott",
+    "dev": "NODE_ENV=development npm run migration && egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "migration": "node ./migrations/index.js",
+    "build": "webpack --watch",
+    "sync": "node ./migrations/sync.js"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}

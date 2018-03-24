@@ -1,0 +1,21 @@
+{
+  "videosDir": "./videos",
+  "outputDir": "./output",
+  "spf": {
+    "0~10": 1,
+    "10~60": 5,
+    "60": 10
+  },
+  "labels": {
+    "video": [
+      {
+        "name": "视频标签1"
+      }
+    ],
+    "clip": [
+      {
+        "name": "视频片段标签1"
+      }
+    ]
+  }
+}

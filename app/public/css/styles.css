@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0
+}
+
+.frame {
+  border: 2px solid transparent;
+}
+
+.frame.frame--selected {
+  border: 2px solid lightgreen;
+
+  box-shadow: 0px 0px 2px #000;
+}
+
+.frame.frame--expanded {
+  border: 2px solid lightblue;
+
+  box-shadow: 0px 0px 2px #000;
+}
+
+.frame.frame--included {
+  border: 2px solid green;
+}
+
+.frame.frame--disabled {
+  opacity: 0.5;
+}
+
+.frame.frame--small {
+  width: 100px;
+}
+
+.ant-table-row {
+  animation: fadeIn 0.15s ease-in;
+}
+
+.ant-table-tbody > tr.ant-table-row-hover > td,
+.ant-table-tbody > tr:hover > td {
+  background: #F9F9F9;
+}
+
+.ant-table-tbody > tr.ant-table-row-hover.clip--choosed > td,
+.ant-table-tbody > tr:hover.clip--choosed > td {
+  background: #E6F7FF;
+}
+
+.ant-table-tbody > tr.clip.clip--choosed td {
+  background: #E6F7FF;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

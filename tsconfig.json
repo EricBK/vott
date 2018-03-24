@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "lib": ["es2017", "dom"]
+  },
+  "files": [
+    "app/public/scripts/index.tsx",
+    "app/public/scripts/App.tsx",
+    "app/public/scripts/Home.tsx",
+    "app/public/scripts/Video.tsx",
+    "app/public/scripts/Store.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
